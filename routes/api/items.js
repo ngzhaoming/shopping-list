@@ -25,10 +25,10 @@ router.post('/', (req, res) => {
     newItem.save().then(item => res.json(item));
 });
 
-// @route POST request api/items/:id
+// @route DELETE request api/items/:id
 // @desc Delete an Item
 // @access Public
-router.post('/', (req, res) => {
+router.delete('/:id', (req, res) => {
     Item.findById(req.params.id)
         .then(item => item.remove().then(() => res.json({success: true})))
         .catch(err => res.status(404).json({success: false}));
