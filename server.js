@@ -1,19 +1,15 @@
 const express = require('express');
 const mongoose = require('mongoose');
 const path = require('path');
-
-//Take request and take data from the body
-const bodyParser = require('body-parser');
-
-const items = require('./routes/api/items');
+const config = require('config');
 
 const app = express();
 
 //Bodyparser Middleware
-app.use(bodyParser.json());
+app.use(express.json());
 
 //DB config connect using the js file that contains all the keys
-const db = require('./config/keys').mongoURI;
+const db = config.get('mongoURI');
 
 //Connect to Mongo using a promise
 mongoose.connect(db, { useNewUrlParser: true, useCreateIndex: true, useUnifiedTopology: true})
@@ -21,7 +17,9 @@ mongoose.connect(db, { useNewUrlParser: true, useCreateIndex: true, useUnifiedTo
     .catch(err => console.log(err));
 
 //Use Routes to divert any request to the item api
-app.use('/api/items', items);
+app.use('/api/items', require('./routes/api/items'));
+app.use('/api/users', require('./routes/api/users'));
+app.use('/api/auth', require('./routes/api/auth'));
 
 //Serve static assets if in production
 if (process.env.NODE_ENV === 'production') {
