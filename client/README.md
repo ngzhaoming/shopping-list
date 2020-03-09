@@ -1,5 +1,14 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## About this project
+
+Thank you for viewing this project. 
+This project has been deployed onto Heroku and is running on its server. <br/>
+Feel free to try out the web application in the link below:<br/>
+[https://zhao-shopping-list.herokuapp.com/](Zhao Shopping List) <br/>
+Do contact me through Github issues should there be any bugs or queries that you have with
+regards to the development of the web application! 😊
+
 ## Available Scripts
 
 In the project directory, you can run:
@@ -12,10 +21,9 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 The page will reload if you make edits.<br />
 You will also see any lint errors in the console.
 
-### `npm test`
+### `npm run dev`
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+This will run both the frontend and backend at the same time without having the need to open two terminals.
 
 ### `npm run build`
 
