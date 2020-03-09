@@ -5,7 +5,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 Thank you for viewing this project. 
 This project has been deployed onto Heroku and is running on its server. <br/>
 Feel free to try out the web application in the link below:<br/>
-[https://zhao-shopping-list.herokuapp.com/](Zhao Shopping List) <br/>
+[Zhao_Shopping_list](https://zhao-shopping-list.herokuapp.com/) <br/>
 Do contact me through Github issues should there be any bugs or queries that you have with
 regards to the development of the web application! 😊
 
